@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Day 2</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+  	$(document).ready(function()
+  	{
+  		$("#b1").dblclick(function()
+  		{
+  			alert("HELLO!! TO CHANGE PARAGRAPH COLOUR CLICK ON OK");
+  			$("h4").css("color","red");
+  		});
+  		$("#b2").click(function()
+  		{
+  			$("#h3").fadeIn(850);
+  		});
+  		$("#b3").click(function()
+  		{
+  			$("#h31").fadeOut(850);
+  		});
+  		$("#b4").click(function()
+  		{
+  			$("#h32").fadeToggle(1000);
+  		});
+  		
+  		$("#b5").click(function()
+  		{
+  			$("p").animate({fontSize:'25px'});
+  			$("img").animate({left:'1000px',width:'500px',height:'500px'});
+
+  		});
+  		$("#div5").click(function()
+  		{
+  			$("#div2").stop();
+  			$("#div4").stop();
+  		});
+
+  	});
+  </script>
+  <style>
+  	body
+  	{
+  		margin-bottom:400px;
+  	}
+  </style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>KNOW MORE IN JQUERY!!</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1 style="text-align:center">Double click Property</h1><button id="b1" class="btn btn-primary"><strong>Double Click</strong> me</button><br><br>
+		<h4>This method is a shortcut for .on( "dblclick", handler ) in the first two variations, and .trigger( "dblclick" ) in the third. The dblclick event is sent to an element when the element is double-clicked. Any HTML element can receive this event. We can do desired manipulations on the selected HTML element using the jQuery double click event handler.</h4>
+	</div>
+		<hr>
+	<div class="container">
+		<h1>Fade Property</h1><br>
+		<button type="button" class="btn btn-info" id="b2">FADE IN</button>&nbsp;&nbsp;<button type="button" class="btn btn-info" id="b3">FADE OUT</button>&nbsp;&nbsp;<button type="button" class="btn btn-info" id="b4">FADE TOGGLE</button><br>
+		<h3 id="h3" style="display: none">HELLO!!</h3>
+		<h3 id="h31">HOPE YOUR ARE SAFE</h3>
+		<h3 id="h32">BE SAFE BE HAPPY!!</h3><br><br><br><br><br>
+</div>
+
+<div class="container">
+	
+	<img src="https://ourcodeworld.com/public-media/articles/articleocw-562bb367bbee4.png" width="155" height="160"><br><br>
+<button class="btn btn-success" id="b5">CLICK HERE FOR <strong>Animate</strong></button><br><br>
+</div>
+	<hr>
+
+</body>
+</html>
